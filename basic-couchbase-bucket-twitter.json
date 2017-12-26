@@ -1,0 +1,15 @@
+{
+  "log": ["HTTP","HTTP+","Changes"],
+  "databases": {
+    "sync_gateway": {
+      "server": "http://localhost:8091",
+      "bucket": "twitter",
+      "username":"sync-gateway",
+      "password":"password",
+      "users": { "GUEST": { "disabled": false, "admin_channels": ["*"] } },
+      "import_docs": "continuous",
+      "enable_shared_bucket_access":true,
+      "sync":`function(doc){channel(doc.user.screen_name)}`
+    }
+  }
+}
