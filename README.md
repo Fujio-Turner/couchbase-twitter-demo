@@ -10,7 +10,7 @@ This is a simple demo for getting tweets into Couchbase via Sync Gateway
 1. Download the above tweepy repo to your local machine from (ABOVE) link.
 
 
-2. Download and copy the sg-streaming.py(ABOVE) into the "examples" folder in tweepy download.
+2. Download and copy the sg-streaming.py (ABOVE) into the "examples" folder in tweepy download.
 
 
 3. Insert your twitter keys & tokens in the sg-streaming.py
@@ -29,18 +29,19 @@ access_token_secret="..."
 
 4.a Create a Bucket in Couchbase (OPTIONAL create the bucket with FULL EJECTION) 
 
-4.b Create a user in Couchbase with password for sync gateway.
+4.b Create a user in Couchbase with password so sync gateway can access the bucket (FULL ADMIN user is the faster and easiest).
 
 
-5.a Download above Sync Gateway config file "basic-couchbase-bucket-twitter.json"
+5.a Download (ABOVE) Sync Gateway config file "basic-couchbase-bucket-twitter.json"
 
-5.b Update config file with bucket name , username and password & start Sync Gateway with config (BELOW).
+5.b Update the config file with the bucket name , username and password. Then go to the folder that you downloaded Sync Gateway and start it with the config (BELOW).
+
 ```
 # bin/sync_gateway /path/to/config/file/basic-couchbase-bucket-twitter.json
 ```
 
 
-6a. Currently the twitter feed is filter by "basketball" related tweets. You might want to change it to something more interesting to you. To change it just open up the sg-streaming.py and on the last line in the file and change the filter string.
+6a. Currently the twitter feed is filtered by "basketball" related tweets. You might want to change it to something more interesting to you. To change it just open sg-streaming.py and on the last line in the file and change the filter string (BELOW).
 ```
 stream.filter(track=['basketball'],async=True)
 ```
@@ -61,5 +62,3 @@ Below is an example of a Full Text Search Index on the tweets in Couchbase.
 # Requirements
 
 - Python 2.7.x
-
-
