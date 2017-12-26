@@ -40,14 +40,19 @@ access_token_secret="..."
 ```
 
 
+6. Start the python script to get tweets and insert them into Sync Gateway
+```
+# ./sg-streaming.py
+```
 
-#FTS
+
+# FTS
 
 <img src="img/fts-twitter-cb-sync-gateway.png">
 
 
 
-#Requirements
+# Requirements
 
 - Python 2.7.x
 
