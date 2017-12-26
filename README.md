@@ -6,4 +6,4 @@ http://www.tweepy.org/
 
 https://github.com/tweepy/tweepy
 
-<img src="img/mobile-couchbase-magento-hpcc-systems.png">
+<img src="img/twitter-python-sync_gateway-couchbase.png">
